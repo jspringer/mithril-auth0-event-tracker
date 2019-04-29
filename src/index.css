@@ -1,0 +1,294 @@
+/* index.css */
+
+@import url('https://fonts.googleapis.com/css?family=Rubik|Roboto');
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.mouse-pointer {
+    cursor: pointer;
+}
+
+#outer-container {
+    width: 100%;
+    position: relative;
+    min-height: 100vh;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background: #ffffff;
+    font-family: 'Rubik', sans-serif;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.nav-bar {
+    flex: 1;
+    display: flex;
+    color: #ffffff;
+    font-family: Helvetica, Arial, sans-serif;
+    background: #39393f;
+    padding: 10px 0 10px 0;
+    max-height: 31px;
+}
+
+.main-stage {
+    flex: 10;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.nav-button {
+    color: #00cf30;
+    font-size: 1.7rem;
+    cursor: pointer;
+    padding-right: 30px;
+}
+
+.nav-bar-title-outer {
+    vertical-align: middle;
+    padding-left: 20px;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.nav-bar-title {
+    vertical-align: middle;
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+}
+
+.nav-bar-icon {
+    height: 100%;
+}
+
+.stage-banner {
+    position: relative;
+    margin: 0.5em;
+}
+
+.stage-banner svg {
+    position: absolute;
+    color: rgb(75, 75, 75);
+    right: 0;
+    top: 47%;
+    transform: translateY(-50%);
+    font-size: 120%;
+}
+
+.stage-title {
+    text-align: center;
+    padding: 1em 0;
+    margin: 0.5em;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 210%;
+    letter-spacing: 2px;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.conference-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.5em;
+    margin: 0.5em;
+    font-size: 100%;
+    background: rgb(245, 245, 245);
+}
+
+.conference-fields {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.conference-field {
+    display: flex;
+    margin: 0.5em;
+    font-size: 100%;
+}
+
+.ui-button {
+    align-self: center;
+    padding: 0.775rem 0.75rem;
+    width: 50%;
+    max-width: 500px;
+    
+    font-weight: 400;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.3rem;
+    cursor: pointer;
+    text-align: center;
+    margin: auto;
+    color: #212529;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.ui-button-success {
+    color: #28a745;
+    border-color: #28a745;
+  }
+  
+.ui-button-success:hover {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+  
+.ui-button-success:focus, .ui-button-success.focus {
+box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+}
+
+.ui-button-success.disabled, .ui-button-success:disabled {
+color: #28a745;
+background-color: transparent;
+}
+
+.ui-button-success:not(:disabled):not(.disabled):active, .ui-button-success:not(:disabled):not(.disabled).active,
+.show > .ui-button-success.dropdown-toggle {
+color: #fff;
+background-color: #28a745;
+border-color: #28a745;
+}
+
+.ui-button-success:not(:disabled):not(.disabled):active:focus, .ui-button-success:not(:disabled):not(.disabled).active:focus,
+.show > .ui-button-success.dropdown-toggle:focus {
+box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+}
+
+.ui-button-span {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.welcomeViewOuter {
+    text-align: center;
+}
+
+.login-button-outer {
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.login-button {
+    text-align: center;
+    margin: auto;
+    align-self: center !important;
+}
+
+.logout-button {
+    position: absolute;
+    top: -48px;
+    right: 0;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.logout-button-color {
+    color: #ffffff !important;
+}
+
+#entry-form {
+    margin: 0 0 0.5em 20px;
+    display: flex;
+    flex-direction: column;
+    color: rgb(90, 90, 90);
+    font-weight: bold;
+}
+
+#entry-form label {
+    padding: 1em 0;
+    width: 100%;
+}
+
+#entry-form input[type="text"] {
+    margin: 0 0 0.5em 0;
+    padding: 0.75em;
+    width: 91%;
+    max-width: 700px;
+    font-size: 16px;
+}
+
+.form-outer {
+    width: 100%;
+    max-width: 700px;
+    align-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.form-question {
+    align-items: center;
+    justify-content: left;
+    padding: 0;
+}
+
+.form-question label {
+    padding: 0;
+    margin-left: 30px;
+}
+
+.app-description {
+    margin-bottom: 20px;
+}
+
+.footerOuter {
+    height: 80px;
+}
+
+.main-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #313131;
+    text-align: center;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.main-footer a {
+    color: #fafafa !important;
+    text-decoration: none;
+}
+
+.main-footer a:hover {
+    color: #dadada !important;
+    text-decoration: none;
+}
