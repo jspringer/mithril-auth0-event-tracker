@@ -25,7 +25,8 @@
     "mithril": "^1.1.6"
   },
   "scripts": {
-    "start": "webpack-dev-server --open",
+    "dev": "webpack-dev-server --open",
+    "start": "node server.js",
     "build": "webpack --config webpack.config.js",
     "heroku-postbuild": "webpack -p"
   }

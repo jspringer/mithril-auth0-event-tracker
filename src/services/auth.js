@@ -6,9 +6,9 @@ import auth0 from "auth0-js";
 export default class Auth {
   auth0 = new auth0.WebAuth({
     domain: process.env.AUTH0_DATA.DOMAIN || AUTH0_DATA.DOMAIN,
-    clientID: process.env.AUTH0_DATA.CLIENT_ID || AUTH0_DATA.CLIENTID,
+    clientID: process.env.A0_DATA.CLIENT_ID || AUTH0_DATA.CLIENTID,
     redirectUri: process.env.AUTH0_DATA.CALLBACK_URL || AUTH0_DATA.CALLBACKURL,
-    audience: process.env.AUTH0_DATA.AUDIENCE || AUTH0_DATA.AUDIENCE,
+    audience: process.env.A0_DATA.AUDIENCE || AUTH0_DATA.AUDIENCE,
     responseType: "token id_token",
     scope: "openid profile email"
   });
