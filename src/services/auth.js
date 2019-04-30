@@ -1,6 +1,6 @@
 const m = require("mithril");
 
-import auth0 from "auth0-js";
+import Auth0 from "auth0-js";
 // import AUTH0_DATA from "./auth0-variables";
 
 /* 
@@ -18,7 +18,7 @@ import auth0 from "auth0-js";
 */
 
 export default class Auth {
-  auth0 = new auth0.WebAuth({
+  auth0 = new Auth0.WebAuth({
     domain: process.env.A0_DOMAIN,
     clientID: process.env.A0_CLIENT_ID,
     redirectUri: process.env.AUTH0_CALLBACK_URL,
