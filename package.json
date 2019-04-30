@@ -28,7 +28,6 @@
     "webpack-merge": "^4.2.1"
   },
   "scripts": {
-    "heroku-prebuild": "npm install --save-dev",
     "dev": "webpack-dev-server --open",
     "start": "webpack -p --progress && node server.js",
     "build": "webpack --config webpack.prod.js"
