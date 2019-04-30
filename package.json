@@ -30,6 +30,6 @@
   "scripts": {
     "dev": "webpack-dev-server --open",
     "start": "node server.js",
-    "build": "webpack --config --progress webpack.prod.js"
+    "build": "webpack --config webpack.prod.js"
   }
 }
