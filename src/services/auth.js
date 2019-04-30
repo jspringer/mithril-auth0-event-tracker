@@ -14,8 +14,8 @@ import auth0 from "auth0-js";
 
 export default class Auth {
   auth0 = new auth0.WebAuth({
-    domain: process.env.A0_DOMAIN,
     clientID: process.env.A0_CLIENT_ID,
+    domain: process.env.A0_DOMAIN,
     redirectUri: process.env.AUTH0_CALLBACK_URL,
     audience: process.env.A0_AUDIENCE,
     responseType: "token id_token",
