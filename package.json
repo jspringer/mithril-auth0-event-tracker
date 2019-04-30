@@ -31,7 +31,7 @@
   },
   "scripts": {
     "dev": "webpack-dev-server --open",
-    "start": "./node_modules/webpack/bin/webpack.js -p --progress && node server.js",
+    "start": "webpack -p --progress && node server.js",
     "build": "webpack --config webpack.prod.js"
   }
 }
