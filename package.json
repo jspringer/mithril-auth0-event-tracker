@@ -29,7 +29,7 @@
   },
   "scripts": {
     "dev": "webpack-dev-server --open",
-    "build": "webpack --config -p",
+    "build": "webpack --config webpack.prod.js",
     "start": "node server.js"
   }
 }
