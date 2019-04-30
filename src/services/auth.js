@@ -3,12 +3,21 @@ const m = require("mithril");
 import auth0 from "auth0-js";
 // import AUTH0_DATA from "./auth0-variables";
 
+/* 
+
+    domain: AUTH0_DATA.DOMAIN,
+    clientID: AUTH0_DATA.CLIENTID,
+    redirectUri: AUTH0_DATA.CALLBACKURL,
+    audience: AUTH0_DATA.AUDIENCE,
+
+*/
+
 export default class Auth {
   auth0 = new auth0.WebAuth({
-    domain: process.env.A0_DOMAIN || AUTH0_DATA.DOMAIN,
-    clientID: process.env.A0_CLIENT_ID || AUTH0_DATA.CLIENTID,
-    redirectUri: process.env.AUTH0_CALLBACK_URL || AUTH0_DATA.CALLBACKURL,
-    audience: process.env.A0_AUDIENCE || AUTH0_DATA.AUDIENCE,
+    domain: process.env.A0_DOMAIN,
+    clientID: process.env.A0_CLIENT_ID,
+    redirectUri: process.env.AUTH0_CALLBACK_URL,
+    audience: process.env.A0_AUDIENCE,
     responseType: "token id_token",
     scope: "openid profile email"
   });
