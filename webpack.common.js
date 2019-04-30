@@ -10,12 +10,15 @@ module.exports = {
     // new CleanWebpackPlugin(['dist/*']) for < v2 versions of CleanWebpackPlugin
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Production'
+      title: 'Production',
+      template: "./index.html",
+			filename: "index.html",
+			inject: "body"
     })
   ],
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, './dist'),
+    filename: 'bundle.js'
   },
   module: {
 		rules: [{
