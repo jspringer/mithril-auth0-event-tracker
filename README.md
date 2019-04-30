@@ -55,7 +55,8 @@ const AUTH0 = {
 export default AUTH0;
 ```
 
-8. As an important step, add `auth0-variables.js` to the `.gitignore` file so that it's never committed to source control. In production, you need to edit auth0 in auth.js to point to the local environment variables on the host server where the above is stored securely.
-9. Back in the Auth0 Dashboard, click on `Settings` under the client's name and scroll down till you find "Allowed Callback URLs". 
-10. Paste your desired callback URL here &mdash; it may be your localhost address where the project is being run locally or the callback URL on the server hosting the app &mdash; and save the settings.
+8. Rename DELTHISFIRSTPART.auth.js to auth.js.
+9. As an important step, add `auth0-variables.js` to the `.gitignore` file so that it's never committed to source control. In production, you need to edit auth0 in auth.js to point to the local environment variables on the host server where the above is stored securely.
+10. Back in the Auth0 Dashboard, click on `Settings` under the client's name and scroll down till you find "Allowed Callback URLs". 
+11. Paste your desired callback URL here &mdash; it may be your localhost address where the project is being run locally or the callback URL on the server hosting the app &mdash; and save the settings.
 

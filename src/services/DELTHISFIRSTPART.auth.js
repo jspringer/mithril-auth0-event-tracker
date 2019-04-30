@@ -1,28 +1,19 @@
 const m = require("mithril");
 
 import Auth0 from "auth0-js";
-// import AUTH0_DATA from "./auth0-variables";
+import AUTH0_DATA from "./auth0-variables";
 
-/* 
 
-    clientID: process.env.A0_CLIENT_ID,
-    domain: process.env.A0_DOMAIN,
-    redirectUri: process.env.AUTH0_CALLBACK_URL,
-    audience: process.env.A0_AUDIENCE,
-
-    domain: AUTH0_DATA.DOMAIN,
-    clientID: AUTH0_DATA.CLIENTID,
-    redirectUri: AUTH0_DATA.CALLBACKURL,
-    audience: AUTH0_DATA.AUDIENCE,
-
-*/
+/* Load env variables, left side is if they are stored locally on the server, 
+   right side is if they are being pulled from the auth0-variables file. 
+   If the former, remove the auth0-variables import. */
 
 export default class Auth {
   auth0 = new Auth0.WebAuth({
-    domain: process.env.A0_DOMAIN,
-    clientID: process.env.A0_CLIENT_ID,
-    redirectUri: process.env.AUTH0_CALLBACK_URL,
-    audience: process.env.A0_AUDIENCE,
+    domain: process.env.AUTH0_DOMAIN || AUTH0_DATA.DOMAIN,
+    clientID: process.env.AUTH0_CLIENT_ID || AUTH0_DATA.CLIENTID,
+    redirectUri: process.env.AUTH0_CALLBACK_URL || AUTH0_DATA.CALLBACKURL,
+    audience: process.env.AUTH0_AUDIENCE || AUTH0_DATA.AUDIENCE,
     responseType: "token id_token",
     scope: "openid profile email"
   });
