@@ -10,7 +10,7 @@ module.exports = {
 		contentBase: "./dist"
 	},
 	plugins: [
-		new CleanWebpackPlugin(["dist"]),
+		new CleanWebpackPlugin(),
 		new HtmlWebpackPlugin({
 			template: "./index.html",
 			filename: "index.html",
