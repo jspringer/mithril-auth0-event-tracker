@@ -9,7 +9,7 @@ require('dotenv').config();
 app.use(express.static(DIST_DIR));
 
 app.get('/*', function(req,res) {  
-  res.sendFile(path.join(__dirname,'./dist/index.html'));
+  res.sendFile(path.join(__dirname,'./'));
 });
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
