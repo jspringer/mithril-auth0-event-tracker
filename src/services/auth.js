@@ -20,9 +20,9 @@ import Auth0 from "auth0-js";
 export default class Auth {
   auth0 = new Auth0.WebAuth({
     domain: process.env.A0_DOMAIN || 'jsnspr.auth0.com',
-    clientID: process.env.A0_CLIENT_ID,
-    redirectUri: process.env.AUTH0_CALLBACK_URL,
-    audience: process.env.A0_AUDIENCE,
+    clientID: process.env.A0_CLIENT_ID || 'LZXOYccCrztk1KK99z1DZ7AY45SEyYMD',
+    redirectUri: process.env.AUTH0_CALLBACK_URL || 'https://jsnspr-mithril-event-tracker.herokuapp.com/callback',
+    audience: process.env.A0_AUDIENCE || 'https://jsnspr.auth0.com/userinfo',
     responseType: "token id_token",
     scope: "openid profile email"
   });
